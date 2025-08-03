@@ -61,7 +61,7 @@ const RareLiving = () => {
           <div
             className={`font-boskaMedium text-primary f-c-col text-[35px] rounded-[11.65px] outline-[1.46px] outline-border w-[100%] py-10 lg:py-20 text-center`}
           >
-            70%
+            80%
             <p className={`text-[16px] ${manropeFont.className}`}>
               LANDSCAPE
               <br />
@@ -179,7 +179,7 @@ const RareLiving = () => {
             className={`p-[20px_40px] max-lg:w-full lg:p-[20px_40px] text-[20px]   hover:bg-amber-200/20 duration-200  lg:text-[24px]  ${
                        manropeFont.className
                      } 
-                        bg-primary text-secondary
+                         text-secondary
                       border-secondary`}
           />
         </div>
