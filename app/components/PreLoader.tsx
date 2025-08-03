@@ -20,7 +20,7 @@ const PreLoader = ({ callback }: { callback: () => void; }) => {
       window.removeEventListener("wheel", handleWheel);
     };
 
-    const handleTouchStart = (e: Event) => {
+    const handleTouchStart = () => {
       console.log("touch detected");
       setVisible(false);
       window.removeEventListener("touchstart", handleTouchStart);
