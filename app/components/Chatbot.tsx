@@ -181,7 +181,7 @@ const Chatbot = () => {
 
 
   useEffect(() => {
-    handleFormSubmission();
+    if (formData.name.length > 0) handleFormSubmission();
   }, [formData])
 
   const [display, setDisplay] = useState<boolean>(false);
