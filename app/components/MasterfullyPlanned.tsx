@@ -54,8 +54,8 @@ const MasterfullyPlanned = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(0); // Initialize with first item selected
 
   return (
-    <div className="w-full bg-primary relative p-[64px_16px] 2xl:p-[20px_400px] gap-[44px] flex flex-col">
-      <motion.h1 initial={initialVariant} whileInView={viewVariant} viewport={viewPortVariant} transition={transitionVariant} className={"font-boskaMedium ml-[50px] text-[64px] lg:text-[96px] text-secondary"}>
+    <div className="w-full bg-primary relative p-[64px_36px] 2xl:p-[20px_400px] gap-[44px] flex flex-col">
+      <motion.h1 initial={initialVariant} whileInView={viewVariant} viewport={viewPortVariant} transition={transitionVariant} className={"font-boskaMedium ml-[70px] text-[64px] lg:text-[96px] text-secondary"}>
         Masterfully Planned
       </motion.h1>
 

@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import ImageGallery from "./components/ImageGallery";
 import Disclaimer from "./components/Disclaimer";
 import PreLoader from "./components/PreLoader";
+import Chatbot from "./components/Chatbot";
 
 export default function Home() {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -29,6 +30,7 @@ export default function Home() {
       <AboutArchitect />
       <Disclaimer />
       <Footer />
+      <Chatbot />
     </div>
   );
 }

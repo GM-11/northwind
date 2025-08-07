@@ -25,7 +25,7 @@ const Hero = () => {
 
       <div className="flex flex-col items-center justify-between inset-0 pr-0 lg:px-20 py-10 h-[90vh] lg:h-[170vh] absolute w-full z-10">
         <div className="self-center ">
-          <Logo />
+          <Logo width={70} height={70} />
         </div>
         <motion.div
           initial={initialVariant}

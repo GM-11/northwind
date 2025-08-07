@@ -5,7 +5,7 @@ export type FormActionProps = {
   email: string;
   message: string;
   mobile: string;
-  isSigned: boolean;
+  isSigned?: boolean;
 };
 
 export async function submitForm(formData: FormActionProps) {
