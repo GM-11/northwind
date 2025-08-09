@@ -6,7 +6,7 @@ import Refresh from "@/components/icons/Refresh";
 import Logo from "@/components/Logo";
 import chatbotMapping from "@/utils/chatbotMappings";
 import { manropeFont } from "@/utils/fonts";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { submitForm } from "@/actions/formActions";
 
@@ -64,56 +64,53 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
   else if (context === "phone") placeholder = "Type your contact number";
   else placeholder = "Type your email";
 
-
   const handleFormValidation = () => {
-    
-      if (
-        formData.name.length === 0 ||
-        formData.email.length === 0 ||
-        formData.phone.length === 0 ||
-        formData.flat.length === 0
-      ) {
-        
-        return false;
-      }
-  
-      if (!formData.email.includes("@")) {
-        
-        return false;
-      }
-  
-      if (!Number.isInteger(Number.parseInt(formData.phone))) {
-        
-        return false;
-      }
-  
-      return true;
-    };
-  
-    const handleFormSubmission = async () => {
-  
-      const isFormValidated = handleFormValidation();
-      if (!isFormValidated) {
-        alert("Invalid values submitted in the form!");
-        return;
-      }
-      const responseFromAction = await submitForm({
-        name: formData.name,
-        email: formData.email,
-        mobile: formData.phone,
-        message: formData.flat
-      });
-  
-      if (responseFromAction) {
-        alert("Form submitted successfully!");
-      }
-    };
+    if (
+      formData.name.length === 0 ||
+      formData.email.length === 0 ||
+      formData.phone.length === 0 ||
+      formData.flat.length === 0
+    ) {
+      return false;
+    }
+
+    if (!formData.email.includes("@")) {
+      return false;
+    }
+
+    if (!Number.isInteger(Number.parseInt(formData.phone))) {
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleFormSubmission = async () => {
+    const isFormValidated = handleFormValidation();
+    if (!isFormValidated) {
+      alert("Invalid values submitted in the form!");
+      return;
+    }
+    const responseFromAction = await submitForm({
+      name: formData.name,
+      email: formData.email,
+      mobile: formData.phone,
+      message: formData.flat,
+    });
+
+    if (!responseFromAction) {
+      alert("Error submitting form!");
+    }
+  };
 
   useEffect(() => {
-    
     const handleBotFunctionality = () => {
       switch (messages.length) {
         case 2:
+          if (messages[messages.length - 1].message.length === 0) {
+            alert("Empty values not allowed!");
+            return;
+          }
           setMessages((prevMessages) => [
             ...prevMessages,
             {
@@ -128,6 +125,10 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
           setContext("phone");
           break;
         case 4:
+          if (messages[messages.length - 1].message.length === 0) {
+            alert("Empty values not allowed!");
+            return;
+          }
           setMessages((prevMessages) => [
             ...prevMessages,
             {
@@ -138,7 +139,12 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
           ]);
           setContext("email");
           break;
+
         case 6:
+          if (messages[messages.length - 1].message.length === 0) {
+            alert("Empty values not allowed!");
+            return;
+          }
           setMessages((prevMessages) => [
             ...prevMessages,
             {
@@ -150,6 +156,10 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
           setContext("flat");
           break;
         case 8:
+          if (messages[messages.length - 1].message.length === 0) {
+            alert("Empty values not allowed!");
+            return;
+          }
           setMessages((prevMessages) => [
             ...prevMessages,
             {
@@ -160,16 +170,15 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
           ]);
           setContext("thanks");
           setFormData(() => {
-            
             const updatedFormData: FormProps = {
               name: messages[1].message,
               phone: messages[3].message,
               email: messages[5].message,
-              flat: messages[7].message as "2 BHK" | "3 BHK" | "4 BHK"
-            }
+              flat: messages[7].message as "2 BHK" | "3 BHK" | "4 BHK",
+            };
             return updatedFormData;
-          })
-          
+          });
+
           break;
         default:
           break;
@@ -179,15 +188,28 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
     handleBotFunctionality();
   }, [messages.length]);
 
-
   useEffect(() => {
     if (formData.name.length > 0) handleFormSubmission();
-  }, [formData])
+  }, [formData]);
 
   const [display, setDisplay] = useState<boolean>(false);
 
+
+  // Scroll to bottom always:
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (ref.current){
+      ref.current.scrollTop = ref.current.scrollHeight;
+    }
+  }, [messages])
+
   return (
-    <div className={`flex flex-col gap-3 fixed max-sm:right-2 right-10 bottom-10 z-[1000000] ${isPreLoaderVisible && "hidden"}`}>
+    <div
+      className={`flex flex-col gap-3 fixed max-sm:right-2 right-10 bottom-10 z-[1000000] ${
+        isPreLoaderVisible && "hidden"
+      }`}
+    >
       <AnimatePresence>
         {display && (
           <motion.div
@@ -233,6 +255,7 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
 
             {/* Messages */}
             <div
+            ref={ref}
               className={`overflow-x-hidden overflow-y-scroll flex flex-col gap-3 px-3 py-2 ${manropeFont.className}`}
             >
               {/* Conversation */}
@@ -296,7 +319,9 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
             </div>
 
             {/* Input */}
-            {(context === "name" || context === "phone" || context === "email") && (
+            {(context === "name" ||
+              context === "phone" ||
+              context === "email") && (
               <div className="flex justify-center gap-2 mt-auto">
                 <input
                   type="text"
@@ -309,12 +334,17 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
                 />
                 <div
                   onClick={() => {
-                    addMessage({
-                      message: userMessage,
-                      sender: "user",
-                      purpose: context,
-                    });
-                    setUserMessage("");
+                    if (userMessage.length > 0) {
+                      addMessage({
+                        message: userMessage,
+                        sender: "user",
+                        purpose: context,
+                      });
+                      setUserMessage("");
+                      return;
+                    }
+                    alert("Empty values not allowed!")
+
                   }}
                   className="rounded-full px-4 py-3 bg-secondary text-primary rotate-180 cursor-pointer"
                 >

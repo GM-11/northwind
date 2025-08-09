@@ -9,7 +9,6 @@ export type FormActionProps = {
 };
 
 export async function submitForm(formData: FormActionProps) {
-  console.log('in action');
   
   const { name, mobile, message, email, isSigned } = formData;
   const form = new URLSearchParams();
@@ -20,8 +19,6 @@ export async function submitForm(formData: FormActionProps) {
   form.append("email", email);
   form.append("isSigned", `${isSigned}`);
   
-  console.log(mobile) 
-  console.log(formData) 
   const response = await fetch(process.env.GOOGLE_APP_SCRIPT_URL!, {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
