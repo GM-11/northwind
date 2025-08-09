@@ -59,7 +59,7 @@ const ConstructionUpdates = () => {
   const listOfTowers = ["Amaltas", "Banyan", "Cedar"];
   return (
     <div
-      className={`w-full relative p-[64px_24px] custom580:p-[64px_80px] bg-secondary lg:p-[100px_100px] 2xl:p-[100px_400px] flex flex-col gap-[36px] z-[9999] ${
+      className={`w-full relative p-[64px_24px] custom580:p-[64px_80px] bg-secondary lg:p-[100px_100px] 2xl:p-[100px_400px] flex flex-col gap-[36px] z-[998] ${
         display && "overflow-hidden"
       }`}
     >
