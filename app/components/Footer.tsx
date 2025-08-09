@@ -22,7 +22,7 @@ const Footer = () => {
       </div>
   
       <div className="w-full h-full flex flex-row max-sm:flex-col-reverse items-center justify-center gap-[0px] relative z-10">
-        <div className="overflow-hidden w-full h-[500px]">
+        <div className="overflow-hidden w-full">
           <img
             src="/assets/rangoli.png"
             alt="rangoli"
