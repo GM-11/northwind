@@ -95,16 +95,16 @@ const ConstructionUpdates = () => {
       >
         <ConstructionArrow
           onClick={handlePrev}
-          className="text-primary cursor-pointer absolute left-0.5 top-1/2 z-[9999]"
+          className="text-primary cursor-pointer absolute left-0.5 top--3/4 z-[9999]"
         />
         <div className="w-full overflow-x-hidden flex justify-center rounded-[15px]">
           <div
             style={{
               transform: `translateX(-${(caraouselIndex) * 100}%)`,
             }}
-            className="flex gap-[8px] w-full max-lg:h-[400px] lg:h-[800px] rounded-[15px] transition-transform relative duration-200"
+            className="flex gap-[8px] w-full max-lg:h-[300px] lg:h-[800px] rounded-[15px] transition-transform relative duration-200"
           >
-            <motion.div className="relative size-full rounded-[15px] shrink-0"
+            <motion.div className="relative w-full h-[90%] rounded-[15px] shrink-0"
              initial={initialVariant}
              whileInView={viewVariant}
              viewport={viewPortVariant}
@@ -119,7 +119,7 @@ const ConstructionUpdates = () => {
               <div className="bg-gradient-to-r from-black/80 via-transparent to-black/80 absolute w-full h-full z-[9999]" />
             </motion.div>
 
-            <div className="relative size-full rounded-[15px] shrink-0">
+            <div className="relative w-full h-[90%] rounded-[15px] shrink-0">
               <Image
                 onClick={() => setDisplay("/assets/construction1.jpg")}
                 src={"/assets/construction2.jpg"}
@@ -130,7 +130,7 @@ const ConstructionUpdates = () => {
               <div className="bg-gradient-to-r from-black/80 via-transparent to-black/80 absolute w-full h-full z-[9999]" />
             </div>
 
-            <div className="relative size-full rounded-[15px] shrink-0">
+            <div className="relative w-full h-[90%] rounded-[15px] shrink-0">
               <Image
                 onClick={() => setDisplay("/assets/construction1.jpg")}
                 src={"/assets/construction3.jpg"}
@@ -142,7 +142,7 @@ const ConstructionUpdates = () => {
             </div>
 
 
-            <div className="relative size-full rounded-[15px] shrink-0">
+            <div className="relative w-full h-[90%] rounded-[15px] shrink-0">
               <Image
                 onClick={() => setDisplay("/assets/construction1.jpg")}
                 src={"/assets/construction4.jpg"}
@@ -157,7 +157,7 @@ const ConstructionUpdates = () => {
         </div>
         <ConstructionArrow
           onClick={handleNext}
-          className="rotate-180 text-primary cursor-pointer absolute right-0.5 top-1/2 z-[9999]"
+          className="rotate-180 text-primary cursor-pointer absolute right-0.5 top--3/4 z-[9999]"
         />
       </div>
 
