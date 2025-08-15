@@ -28,7 +28,7 @@ export default function Home() {
       <Hero isPreLoaderVisible={isPreLoaderVisible} />
       <ImageGallery />
       <MasterfullyPlanned />
-      <ConstructionUpdates />
+      <ConstructionUpdates ref={ref}/>
       <SustainablyDesigned />
       <ConnectWithUs />
       <AboutArchitect />

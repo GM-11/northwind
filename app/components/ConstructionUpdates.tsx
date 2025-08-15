@@ -4,17 +4,51 @@ import PrimaryButton from "@/components/buttons/PrimaryButton";
 import SecondaryButton from "@/components/buttons/SecondaryButton";
 import { ConstructionArrow} from "@/components/icons/ConstructionArrow";
 import VideoCircle from "@/components/icons/VideoCircle";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import { manropeFont } from "@/utils/fonts";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { RefObject, useEffect, useRef, useState } from "react";
 import { useMotionVariants } from "@/utils/motionVariant";
 import { useFullImageStore } from "@/stores/useFullImageStore";
 import FullImage from "./FullImage";
 import WatchSite from "./WatchSite";
 import { LeftArrow } from "@/components/icons/LeftArrow";
 
-const ConstructionUpdates = () => {
+const ConstructionUpdates = ({ ref }: { ref: RefObject<HTMLDivElement | null> }) => {
+
+
+  const [scale, setScale] = useState(0.2);
+  const lastScrollY = useRef(0);
+
+  const elementRef = useRef(null);
+  const isInView = useInView(elementRef, { amount: 0.1 });
+
+
+  useEffect(() => {
+    
+    const handleScroll = () => {
+      console.log("in image effect", isInView);
+    if (!isInView) return;
+
+      const currentScrollY = ref.current?.scrollTop || 0;
+      console.log("current scroll y is: ", currentScrollY);
+      
+
+      if (currentScrollY > lastScrollY.current) {
+        setScale((prev) => Math.min(prev + 0.02, 1));
+      } else {
+        setScale((prev) => Math.max(prev - 0.02, 0.5));
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    ref.current?.addEventListener("scroll", handleScroll);
+    return () => ref.current?.removeEventListener("scroll", handleScroll);
+  }, [isInView]);
+
+
+
   const { setDisplay, display } = useFullImageStore(); //custom hook with store
   const { initialVariant, viewVariant, transitionVariant, viewPortVariant } =
     useMotionVariants();
@@ -58,7 +92,10 @@ const ConstructionUpdates = () => {
 
   const listOfTowers = ["Amaltas", "Banyan", "Cedar"];
   return (
-    <div
+    <motion.div
+    ref={elementRef} initial={{
+              scale: 0.2
+            }} animate={{ scale }} transition={{ type: "tween", stiffness: 200, damping: 20 }}
       className={`w-full relative p-[64px_24px] custom580:p-[64px_80px] bg-secondary lg:p-[100px_100px] 2xl:p-[100px_400px] flex flex-col gap-[36px] z-[998] ${
         display && "overflow-hidden"
       }`}
@@ -88,10 +125,11 @@ const ConstructionUpdates = () => {
         </motion.p>
       </div>
 
-      <div
+      <motion.div
+      
         className={`${
           (display || showSiteVideo) && "brightness-50"
-        } w-full relative flex justify-center gap-1 items-center`}
+        } relative flex justify-center gap-1 items-center border border-primary`}
       >
         <ConstructionArrow
           onClick={handlePrev}
@@ -105,15 +143,12 @@ const ConstructionUpdates = () => {
             className="flex gap-[8px] w-full max-lg:h-[400px] lg:h-[800px] rounded-[15px] transition-transform relative duration-200"
           >
             <motion.div className="relative size-full rounded-[15px] shrink-0"
-             initial={initialVariant}
-             whileInView={viewVariant}
-             viewport={viewPortVariant}
-             transition={transitionVariant}>
+             >
               <Image
                 onClick={() => setDisplay("/assets/construction1.jpg")}
                 src={"/assets/construction1.jpg"}
                 fill
-                className={`rounded-[15px]  cursor-pointer`}
+                className={`rounded-[15px] cursor-pointer`}
                 alt="building-2"
               />
               <div className="bg-gradient-to-r from-black/80 via-transparent to-black/80 absolute w-full h-full z-[9999]" />
@@ -159,7 +194,7 @@ const ConstructionUpdates = () => {
           onClick={handleNext}
           className="rotate-180 text-primary cursor-pointer absolute right-0.5 top-1/2 z-[9999]"
         />
-      </div>
+      </motion.div>
 
       <div
         className={`py-[24px] ${
@@ -278,7 +313,7 @@ const ConstructionUpdates = () => {
       </div>
       <FullImage />
       <WatchSite display={showSiteVideo} setDisplay={setShowSiteVideo} />
-    </div>
+    </motion.div>
   );
 };
 
