@@ -17,7 +17,7 @@ const PickleBall=() =>{
             <div className="w-full md:h-[100vh] lg:p-[0px_0px] 2xl:p-[0px_200px] relative lg:gap-[40px] flex flex-col-reverse lg:flex-row-reverse justify-center bg-primary">
 
                 <motion.div
-                className="bg-[url('/assets/world.jpg')] w-full lg:w-1/2 md:h-full min-h-[400px] bg-contain bg-no-repeat bg-center lg:bg-right bg-primary" 
+                className="bg-[url('/assets/pickle1.jpg')] w-full lg:w-1/2 md:h-full min-h-[400px] bg-contain bg-no-repeat bg-center lg:bg-right bg-primary" 
                     initial={initialVariant}
                     whileInView={viewVariant}
                     viewport={viewPortVariant}
@@ -49,13 +49,14 @@ const PickleBall=() =>{
             </div>
 
             <div className="w-full md:h-[100vh] p-[0px_0px] 2xl:p-[0px_200px] relative lg:gap-10 flex flex-col-reverse lg:flex-row justify-center bg-primary">
-            
+                
                 <motion.div
-                className="bg-[url('/assets/world.jpg')] w-full lg:w-1/2 md:h-full min-h-[400px] bg-contain bg-no-repeat bg-center lg:bg-right bg-primary" 
+                className="bg-[url('/assets/pickle2.jpg')] w-full lg:w-1/2 md:h-full min-h-[400px] bg-contain bg-no-repeat bg-center lg:bg-right bg-primary" 
                     initial={initialVariant}
                     whileInView={viewVariant}
                     viewport={viewPortVariant}
                     transition={transitionVariant}/>
+                
                 <div className="flex flex-col lg:justify-center lg:w-[40%] max-md:bg-primary p-[64px_24px]">
                     <motion.h2
                     initial={initialVariant}
@@ -73,7 +74,7 @@ const PickleBall=() =>{
                     whileInView={viewVariant}
                     transition={transitionVariant}
                     viewport={viewPortVariant}
-                    className={`mt-[48px] ${manropeFont.className} text-[20px] lg:text-[24px] text-secondary font-[500]`}
+                    className={` ${manropeFont.className} text-[20px] lg:text-[24px] text-secondary font-[500]`}
                     >
                     Experience a breathtaking<br/>
                      architectural marvel—the Skywalk Waterfall.
@@ -88,7 +89,7 @@ const PickleBall=() =>{
              <div className="w-full md:h-[100vh] p-[0px_0px] 2xl:p-[0px_200px] relative lg:gap-10 flex flex-col-reverse lg:flex-row-reverse justify-center bg-primary">
             
                 <motion.div
-                className="bg-[url('/assets/world.jpg')] w-full lg:w-1/2 md:h-full min-h-[400px] bg-contain bg-no-repeat bg-center lg:bg-right bg-primary" 
+                className="bg-[url('/assets/pickle3.jpg')] w-full lg:w-1/2 md:h-full min-h-[400px] bg-contain bg-no-repeat bg-center lg:bg-right bg-primary" 
                     initial={initialVariant}
                     whileInView={viewVariant}
                     viewport={viewPortVariant}
@@ -101,7 +102,8 @@ const PickleBall=() =>{
                     viewport={viewPortVariant}
                     className="font-boskaMedium text-secondary text-[60px] lg:text-[96px] z-20 leading-none"
                     >
-                    Serenity Walk Waterfall
+                    Architecural <br/>
+                    Sky Walk
                     
                     </motion.h2>
                 
@@ -112,15 +114,15 @@ const PickleBall=() =>{
                     viewport={viewPortVariant}
                     className={`mt-[48px] ${manropeFont.className} text-[20px] lg:text-[24px] text-secondary font-[500]`}
                     >
-                    Experience a breathtaking<br/>
-                     architectural marvel—the Skywalk Waterfall.
+                    Stroll among the clouds on the <br/>
+                     stunning Sky Bridge
                     </motion.p>
                 </div>
             </div>    
             <div className="w-full md:h-[100vh] p-[0px_0px] 2xl:p-[0px_200px] relative lg:gap-10 flex flex-col-reverse lg:flex-row justify-center bg-primary">
             
                 <motion.div
-                className="bg-[url('/assets/world.jpg')] w-full lg:w-1/2 md:h-full min-h-[400px] bg-contain bg-no-repeat bg-center lg:bg-right bg-primary" 
+                className="bg-[url('/assets/pickle4.jpg')] w-full lg:w-1/2 md:h-full min-h-[400px] bg-contain bg-no-repeat bg-center lg:bg-right bg-primary" 
                     initial={initialVariant}
                     whileInView={viewVariant}
                     viewport={viewPortVariant}
@@ -133,7 +135,7 @@ const PickleBall=() =>{
                     viewport={viewPortVariant}
                     className="font-boskaMedium text-secondary text-[60px] lg:text-[96px] z-20 leading-none"
                     >
-                    Serenity Walk Waterfall
+                    Resort-Style Swimming Pool
                     
                     </motion.h2>
                 
@@ -142,10 +144,10 @@ const PickleBall=() =>{
                     whileInView={viewVariant}
                     transition={transitionVariant}
                     viewport={viewPortVariant}
-                    className={`mt-[48px] ${manropeFont.className} text-[20px] lg:text-[24px] text-secondary font-[500]`}
+                    className={`${manropeFont.className} text-[20px] lg:text-[24px] text-secondary font-[500]`}
                     >
-                    Experience a breathtaking<br/>
-                     architectural marvel—the Skywalk Waterfall.
+                     Indulge in resort-style living at our<br/>
+                     magnificent swimming pool.
                     </motion.p>
                 </div>
             </div>    

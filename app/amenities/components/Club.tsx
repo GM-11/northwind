@@ -23,7 +23,7 @@ const Club =() =>{
                     <div className="w-full md:h-[100vh] ${manropeFont.className} p-[0px_0px] lg:p-[0px_40px] 2xl:p-[0px_200px] relative lg:gap-10 flex flex-col-reverse lg:flex-row justify-center bg-primary mb-[10px]">
                     
                         <motion.div
-                        className="bg-[url('/assets/world.jpg')] ${manropeFont.className} w-full lg:w-2/3 md:h-[80%] min-h-[400px] bg-cover bg-no-repeat bg-center lg:bg-right bg-primary" 
+                        className="bg-[url('/assets/club1.jpg')] ${manropeFont.className} w-full lg:w-2/3 md:h-[80%] min-h-[400px] bg-cover bg-no-repeat bg-center lg:bg-right bg-primary" 
                             initial={initialVariant}
                             whileInView={viewVariant}
                             viewport={viewPortVariant}
@@ -34,7 +34,7 @@ const Club =() =>{
                             whileInView={viewVariant}
                             transition={transitionVariant}
                             viewport={viewPortVariant}
-                            className="bg-[url('/assets/world.jpg')] w-full lg:w-1/3 md:h-[40%] min-h-[400px] bg-cover bg-no-repeat bg-center lg:bg-right bg-primary"
+                            className="bg-[url('/assets/club2.jpg')] w-full lg:w-1/3 md:h-[40%] min-h-[400px] bg-cover bg-no-repeat bg-center lg:bg-right bg-primary"
                             />     
                         
                     </div>

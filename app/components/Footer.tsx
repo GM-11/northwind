@@ -8,7 +8,7 @@ import Globe from "@/components/icons/Globe";
 import { motion } from "framer-motion";
 import { useMotionVariants } from "@/utils/motionVariant";
 
-const Footer = () => {
+export const Footer = () => {
   
   const { initialVariant, viewVariant, viewPortVariant, transitionVariant } = useMotionVariants();
   return (
@@ -112,4 +112,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+

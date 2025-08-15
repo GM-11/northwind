@@ -11,13 +11,13 @@ const WorldClass=() =>{
 
    return (
    
-    <div className="w-full h-[150vh] bg-primary relative gap-[20px] flex flex-col">
+    <div className="w-full h-[150vh] bg-primary relative gap-[20px] flex flex-col  -mt-16 md:mt-0">
    
     
             <div className="w-full md:h-[100vh] p-[0px_0px] 2xl:p-[0px_200px] relative lg:gap-[40px] flex flex-col-reverse lg:flex-row justify-center bg-primary">
             
                 <motion.div
-                className="bg-[url('/assets/world.jpg')] w-full lg:w-1/2 md:h-full min-h-[400px] bg-contain bg-no-repeat bg-center lg:bg-right bg-primary" 
+                className="bg-[url('/assets/avRoom.jpg')] w-full lg:w-1/2 md:h-full min-h-[400px] bg-contain bg-no-repeat bg-center lg:bg-right bg-primary" 
                     initial={initialVariant}
                     whileInView={viewVariant}
                     viewport={viewPortVariant}
@@ -51,7 +51,7 @@ const WorldClass=() =>{
             <div className="w-full md:h-[100vh] p-[0px_0px] 2xl:p-[0px_200px] relative lg:gap-10 flex flex-col-reverse lg:flex-row-reverse justify-center bg-primary">
             
                 <motion.div
-                className="bg-[url('/assets/world.jpg')] w-full lg:w-1/2 md:h-full min-h-[400px] bg-contain bg-no-repeat bg-center lg:bg-right bg-primary" 
+                className="bg-[url('/assets/arcade.jpg')] w-full lg:w-1/2 md:h-full min-h-[400px] bg-contain bg-no-repeat bg-center lg:bg-right bg-primary" 
                     initial={initialVariant}
                     whileInView={viewVariant}
                     viewport={viewPortVariant}

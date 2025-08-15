@@ -24,14 +24,14 @@ const Hero = () => {
 
             ></div>
             <div className="absolute bottom-8 right-8 z-200">
-                <h1 className="font-boskaMedium text-6xl  text-white tracking-wide">
+                <h1 className="font-boskaMedium text-[96px] text-white tracking-wide">
                     Amenities
                 </h1>
             </div>
         </div>
 
         <div className="flex flex-col w-full  justify-center items-center py-[96px] h-[204px] gap-8" >
-           <p className={`${manropeFont.className} text-[28px] text-black uppercase `}>
+           <p className={`${manropeFont.className}  text-black uppercase px-4 text-[20px] lg:text-[24px]`}>
             Discover a curated collection of indoor and outdoor amenities, designed to<br/>
             provide residents with an unparalleled experience of leisure, wellness, and community.
            </p>

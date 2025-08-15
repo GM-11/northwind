@@ -8,7 +8,7 @@ import Hero from "./components/Hero";
 import MasterfullyPlanned from "./components/MasterfullyPlanned";
 import NavBar from "./components/NavBar";
 import SustainablyDesigned from "./components/SustainablyDesigned";
-import Footer from "./components/Footer";
+import { Footer } from "./components/Footer";
 import ImageGallery from "./components/ImageGallery";
 import Disclaimer from "./components/Disclaimer";
 import PreLoader from "./components/PreLoader";
