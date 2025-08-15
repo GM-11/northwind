@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import Navigation from "./Navigation";
 import { motion } from "framer-motion";
 
-const NavBar = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
+const NavBar = ({ isPreLoaderVisible }: { isPreLoaderVisible ?: boolean }) => {
   const [showNavigation, setShowNavigation] = useState<boolean>(false);
 
   return (

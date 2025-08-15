@@ -71,6 +71,19 @@ body {
   }
 }
 
+.dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: #000; /* change to your brand color */
+  border-radius: 50%;
+  z-index: 9999; /* make sure it's above everything */
+  pointer-events: none;
+}
+
 @layer components {
   .primary-btn {
     @apply rounded-full border border-secondary flex justify-center items-center cursor-pointer;
