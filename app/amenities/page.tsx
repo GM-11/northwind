@@ -11,10 +11,11 @@ import All from '../amenities/components/All';
 
 
 
-const page=() =>{
-  
+
+
+export default function page() {
   return (
-    <div className={`w-screen && "h-screen"} overflow-x-hidden relative bg-primary  `}>
+    <div className={`w-screen && "h-screen"} overflow-x-hidden relative bg-primary md:0 `}>
       <NavBar />
       <Hero  />
       <WorldClass />
@@ -23,8 +24,9 @@ const page=() =>{
       <PickleBall />
       <All/>
       
+      
+      
     </div>
   );
 }
-export default page;
 

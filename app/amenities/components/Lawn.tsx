@@ -7,7 +7,7 @@ import { useMotionVariants } from "@/utils/motionVariant";
 const Lawn=() =>{
     const {initialVariant,viewPortVariant,viewVariant,transitionVariant}= useMotionVariants();
     return(
-        <div className="w-full bg-primary text-center lg:p-[0px_40px] items-center lg:justify-center relative  flex flex-col gap-[20px]">
+        <div className="w-full bg-primary text-center lg:p-[0px_40px] items-center lg:justify-center relative  flex flex-col gap-[20px] mb-[100px]">
             <div className="flex flex-col items-center justify-center w-full ml-[20px]">
                 <motion.h1
                     initial={initialVariant}
@@ -26,7 +26,7 @@ const Lawn=() =>{
             <div className="w-full md:h-[100vh] p-[0px_0px] lg:p-[0px_40px] 2xl:p-[0px_200px] relative lg:gap-10 flex flex-col justify-center text-center bg-primary mb-[10px]">
             
                 <motion.div
-                className="bg-[url('/assets/world.jpg')] w-full  md:h-[80%] min-h-[400px] bg-cover bg-no-repeat bg-center lg:bg-right bg-primary" 
+                className="bg-[url('/assets/openLawn.png')] w-full  md:h-[80%] min-h-[400px] bg-cover bg-no-repeat bg-center lg:bg-right bg-primary" 
                     initial={initialVariant}
                     whileInView={viewVariant}
                     viewport={viewPortVariant}
