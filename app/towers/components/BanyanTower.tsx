@@ -32,7 +32,7 @@ const BanyanTower = () => {
           localStorage.setItem("purpose", "form");
           router.replace("/");
         }}
-        className="bg-secondary w-full px-[41px] py-[21px] border-none text-[20px] lg:text-[24px] max-lg:self-center mt-[28px] lg:mt-[56px]"
+        className="bg-[#161203] w-full px-[41px] py-[21px] border-none text-[20px] lg:text-[24px] max-lg:self-center mt-[28px] lg:mt-[56px]"
       />
     </div>
   );

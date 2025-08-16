@@ -9,7 +9,7 @@ const Lawn = () => {
     useMotionVariants();
   return (
     <div className="w-full bg-primary text-center lg:p-[0px_40px] items-center lg:justify-center relative flex flex-col gap-[20px] mt-[20px]">
-      <div className="flex flex-col w-full px-[200px]">
+      <div className="flex flex-col w-full px-[20px] 2xl:px-[200px]">
         <motion.h1
           initial={initialVariant}
           whileInView={viewVariant}
@@ -33,7 +33,7 @@ const Lawn = () => {
         </motion.p>
       </div>
 
-      <div className="w-full md:h-[100vh] mt-[96px] p-[0px_0px] lg:p-[0px_40px] 2xl:p-[0px_200px] relative flex flex-col justify-center text-center bg-primary mb-[10px]">
+      <div className="w-full md:h-[100vh] mt-[96px] p-[0px_20px] lg:p-[0px_40px] 2xl:p-[0px_200px] relative flex flex-col justify-center text-center bg-primary mb-[10px]">
         <motion.div
           className="bg-[url('/assets/openLawn.png')] w-full md:h-[80%] min-h-[400px] bg-cover bg-no-repeat bg-center lg:bg-right bg-primary"
           initial={initialVariant}

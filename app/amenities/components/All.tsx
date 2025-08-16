@@ -1,5 +1,6 @@
 import React from "react";
 import { manropeFont } from "@/utils/fonts";
+
 export default function All() {
   const amenitiesLeft = [
     "Entrance Plaza",
@@ -45,32 +46,32 @@ export default function All() {
   ];
 
   return (
-    <div className="bg-secondary w-full text-primary py-16 px-6 lg:px-24">
-     
-      <h1 className="text-[56px] lg:text-[96px] font-boskaMedium text-primary mb-12">
-        All Amenities
-      </h1>
+    <div className="bg-secondary w-full text-primary py-16 px-6 lg:px-24 flex justify-center items-center min-h-screen">
+      <div className="max-w-6xl w-full text-left">
+        <h1 className="text-[56px] lg:text-[72px] font-boskaMedium text-primary mb-12">
+          All Amenities
+        </h1>
 
+        <div className={`grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2 text-[20px] leading-relaxed ${manropeFont.className} text-left`}>
+          <ol className={`list-decimal list-inside space-y-2 ${manropeFont.className}`}>
+            {amenitiesLeft.map((item, index) => (
+              <li key={index} className={`text-[#F5ECDC] font-light ${manropeFont.className}`}>
+                {item}
+              </li>
+            ))}
+          </ol>
 
-      <div className={`grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2 text-[24px] leading-relaxed ${manropeFont.className}`}>
-        <ol className={`list-decimal list-inside space-y-2 ${manropeFont.className}`}>
-          {amenitiesLeft.map((item, index) => (
-            <li key={index} className={`text-[#F5ECDC] font-light ${manropeFont.className}`}>
-              {item}
-            </li>
-          ))}
-        </ol>
-
-        <ol
-          className={`list-decimal list-inside space-y-2 ${manropeFont.className}`}
-          start={amenitiesLeft.length + 1}
-        >
-          {amenitiesRight.map((item, index) => (
-            <li key={index} className={`text-[#F5ECDC] font-light ${manropeFont.className}`}>
-              {item}
-            </li>
-          ))}
-        </ol>
+          <ol
+            className={`list-decimal list-inside space-y-2 ${manropeFont.className}`}
+            start={amenitiesLeft.length + 1}
+          >
+            {amenitiesRight.map((item, index) => (
+              <li key={index} className={`text-[#F5ECDC] font-light ${manropeFont.className}`}>
+                {item}
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
     </div>
   );
