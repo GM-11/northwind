@@ -326,6 +326,7 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
                 <input
                   type="text"
                   value={userMessage}
+                  maxLength={context === "phone" ? 10 : 100}
                   onChange={(e) => {
                     setUserMessage(e.target.value);
                   }}
