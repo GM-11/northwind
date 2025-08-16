@@ -35,6 +35,17 @@ export default function Home() {
           localStorage.setItem("purpose", "main")
         }, 100);
       }
+       else if (purpose === "architect") {
+        setPurpose("architect");
+        setIsPreLoaderVisible(false);
+        setFullHeight(true);
+
+        setTimeout(() => {
+          document.getElementById("about-architect")?.scrollIntoView({ behavior: "smooth" });
+          localStorage.setItem("purpose", "main")
+        }, 100);
+      
+       }
     }
   }, [purpose]);
 
