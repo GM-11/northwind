@@ -63,7 +63,7 @@ const Navigation = ({
           <div className="flex flex-col gap-[12px] lg:gap-[16px] border-primary self-start">
             <div onClick={() => {
                 setShow(false);
-                window.open("/");
+                window.open("/", "auto");
                 localStorage.setItem("purpose", "main")
               }} className="uppercase font-boskaMedium text-[32px] lg:text-[64px] text-primary cursor-pointer">
               home
