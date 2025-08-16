@@ -14,7 +14,7 @@ export function ConstructionArrow(props: SVGProps<SVGSVGElement>) {
       <path
         d="M0 0H36C42.6274 0 48 5.37258 48 12V108C48 114.627 42.6274 120 36 120H0V0Z"
         fill="#161203"
-        fill-opacity="0.8"
+        fillOpacity="0.8"
       />
       <mask
         id="mask0_2619_3679"

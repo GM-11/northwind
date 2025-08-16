@@ -18,7 +18,7 @@ export default function Home() {
   const ref = useRef<HTMLDivElement | null>(null);
   const [fullHeight, setFullHeight] = useState<boolean>(false);
   const [isPreLoaderVisible, setIsPreLoaderVisible] = useState<boolean>(true);
-   const [purpose, setPurpose] = useState<string | null>("main");
+   const [purpose, setPurpose] = useState<string | null>(null);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
