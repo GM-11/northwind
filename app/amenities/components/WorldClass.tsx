@@ -74,7 +74,7 @@ const WorldClass = () => {
             className={`mt-[48px] ${manropeFont.className} text-[20px] lg:text-[24px] text-secondary font-[500]`}
           >
             Unwind and indulge your competitive <br />
-            spirit in the residents' Game Room
+            spirit in the residents&apos Game Room
           </motion.p>
         </div>
       </div>

@@ -169,7 +169,7 @@ const Towers = () => {
 
   // ye bas dekhne ke lie h console me scroll ke hissab se kon sa frame live hai abhi.
   useEffect(() => {
-    const unsubscribe = scrollYProgress.on("change", (latest) => {
+    const unsubscribe = scrollYProgress.on("change", () => {
     });
     return unsubscribe;
   }, [scrollYProgress]);
