@@ -15,15 +15,15 @@ const Hero = () => {
     const router = useRouter()
   return (
     <section className="w-full relative bg-primary">
-      <div className="w-full h-[100vh] relative overflow-hidden border-4 flex items-end border-amber-700">
+      <div className="w-full h-[100vh] relative overflow-hidden border-4 flex items-end">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url('assets/reception.png')` }}
         ></div>
 
         {/* Overlay with full height to help position content exactly */}
-        <div className="absolute mt-auto inset-0 flex items-end justify-end px-8 ">
-          <h1 className="font-boskaMedium text-[128px] text-bg-primary border border-white tracking-wide leading-none">
+        <div className="absolute mt-auto inset-0 flex items-end justify-end px-8 py-0">
+          <h1 className="font-boskaMedium text-[128px] p-0 text-bg-primary tracking-wide leading-24">
             Amenities
           </h1>
         </div>
@@ -32,7 +32,7 @@ const Hero = () => {
 
       <div className="flex flex-col w-full  justify-center items-center py-[96px] h-[204px] gap-8">
         <p
-          className={`${manropeFont.className}  text-black  px-4 text-[20px] lg:text-[24px]`}
+          className={`${manropeFont.className}  text-black px-4 text-[20px] lg:text-[24px]`}
         >
           Discover a curated collection of indoor and outdoor amenities,
           designed to

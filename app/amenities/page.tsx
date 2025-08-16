@@ -11,6 +11,7 @@ import PickleBall from '../amenities/components/PickleBall';
 import All from '../amenities/components/All';
 import { Footer } from '../components/Footer';
 import ConnectWithUs from '../components/ConnectWithUs';
+import Chatbot from '../components/Chatbot';
 
 
 
@@ -26,6 +27,7 @@ export default function page() {
       <All />
       <ConnectWithUs />
       <Footer />
+      <Chatbot isPreLoaderVisible={false} />
     </div>
   );
 }

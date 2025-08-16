@@ -18,7 +18,7 @@ const PickleBall = () => {
           viewport={viewPortVariant}
           transition={transitionVariant}
         />
-        <div className="flex flex-col lg:justify-center lg:w-[40%] max-md:bg-primary p-[64px_24px] lg:gap-[40px]">
+        <div className="flex flex-col lg:justify-center lg:w-[40%] max-md:bg-primary p-[64px_24px] lg:gap-[0px]">
           <motion.h1
             initial={initialVariant}
             whileInView={viewVariant}
@@ -34,10 +34,10 @@ const PickleBall = () => {
             whileInView={viewVariant}
             transition={transitionVariant}
             viewport={viewPortVariant}
-            className={`mt-[48px] ${manropeFont.className} text-[20px] lg:text-[24px] text-secondary font-[500]`}
+            className={`mt-[16px] ${manropeFont.className} text-[20px] lg:text-[24px] text-secondary font-[500]`}
           >
             Unwind and indulge your competitive <br />
-            spirit in the residents&apos Game Room
+            spirit in the resident&apos;s Game Room
             <br />
           </motion.p>
         </div>
@@ -68,7 +68,7 @@ const PickleBall = () => {
             whileInView={viewVariant}
             transition={transitionVariant}
             viewport={viewPortVariant}
-            className={` ${manropeFont.className} text-[20px] lg:text-[24px] text-secondary font-[500]`}
+            className={` ${manropeFont.className} mt-[16px] text-[20px] lg:text-[24px] text-secondary font-[500]`}
           >
             Experience a breathtaking
             <br />
@@ -101,7 +101,7 @@ const PickleBall = () => {
             whileInView={viewVariant}
             transition={transitionVariant}
             viewport={viewPortVariant}
-            className={`mt-[48px] ${manropeFont.className} text-[20px] lg:text-[24px] text-secondary font-[500]`}
+            className={`mt-[16px] ${manropeFont.className} text-[20px] lg:text-[24px] text-secondary font-[500]`}
           >
             Stroll among the clouds on the <br />
             stunning Sky Bridge
@@ -132,7 +132,7 @@ const PickleBall = () => {
             whileInView={viewVariant}
             transition={transitionVariant}
             viewport={viewPortVariant}
-            className={`${manropeFont.className} text-[20px] lg:text-[24px] text-secondary font-[500]`}
+            className={`${manropeFont.className} mt-[16px] text-[20px] lg:text-[24px] text-secondary font-[500]`}
           >
             Indulge in resort-style living at our
             <br />

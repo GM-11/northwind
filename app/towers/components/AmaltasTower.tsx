@@ -30,9 +30,9 @@ const AmaltasTower = () => {
         text="Express Interest"
         onTap={() => {
           localStorage.setItem("purpose", "form");
-          router.push("/");
+          router.replace("/");
         }}
-        className="bg-secondary text-[20px] lg:text-[24px] max-lg:self-center mt-[28px] lg:mt-[56px] px-[41px] py-[21px] border-none"
+        className="bg-secondary w-full text-[20px] lg:text-[24px] max-lg:self-center mt-[28px] lg:mt-[56px] px-[41px] py-[21px] border-none"
       />
     </div>
   );

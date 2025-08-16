@@ -229,7 +229,7 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
               duration: 0.5,
               type: "spring",
             }}
-            className="rounded-[15px] w-[360px] max-custom400:w-[100%] h-[444px] flex flex-col overflow-hidden bg-primary  pb-[10px]"
+            className="rounded-[15px] border border-secondary w-[360px] max-custom400:w-[100%] h-[444px] flex flex-col overflow-hidden bg-primary pb-[10px]"
           >
             {/* Header */}
             <div className="bg-secondary flex justify-between items-center px-4 py-3">
@@ -329,7 +329,7 @@ const Chatbot = ({ isPreLoaderVisible }: { isPreLoaderVisible: boolean }) => {
                   onChange={(e) => {
                     setUserMessage(e.target.value);
                   }}
-                  className={`rounded-3xl border border-secondary px-3 py-2 w-[280px] ${manropeFont.className}`}
+                  className={`rounded-3xl border border-secondary text-secondary px-3 py-2 w-[280px] ${manropeFont.className}`}
                   placeholder={placeholder}
                 />
                 <div

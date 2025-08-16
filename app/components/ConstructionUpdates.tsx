@@ -88,13 +88,8 @@ const ConstructionUpdates = ({
   const listOfTowers = ["Amaltas", "Banyan", "Cedar"];
   return (
     <div className="w-full bg-secondary">
-      <motion.div
-      ref={elementRef}
-      initial={{
-        scale: 0.2,
-      }}
-      animate={{ scale }}
-      transition={{ type: "tween", stiffness: 200, damping: 20 }}
+      <div
+      
       className={`w-full relative p-[64px_24px] custom580:p-[64px_80px] bg-secondary lg:p-[100px_100px] 2xl:p-[100px_400px] flex flex-col gap-[36px] z-[998] ${
         display && "overflow-hidden"
       }`}
@@ -131,7 +126,7 @@ const ConstructionUpdates = ({
       >
         <ConstructionArrow
           onClick={handlePrev}
-          className="text-primary cursor-pointer absolute left-0.5 top-1/2 z-[9999]"
+          className="text-primary rounded-[12px] cursor-pointer absolute left-0 top-1/2 z-[9999]"
         />
         <div className="w-full overflow-x-hidden flex justify-center rounded-[15px]">
           <div
@@ -187,7 +182,7 @@ const ConstructionUpdates = ({
         </div>
         <ConstructionArrow
           onClick={handleNext}
-          className="rotate-180 text-primary cursor-pointer absolute right-0.5 top-1/2 z-[9999]"
+          className="rotate-180 text-primary cursor-pointer absolute right-0 top-1/2 z-[9999]"
         />
       </motion.div>
 
@@ -306,7 +301,7 @@ const ConstructionUpdates = ({
       </div>
       <FullImage />
       <WatchSite display={showSiteVideo} setDisplay={setShowSiteVideo} />
-    </motion.div>
+    </div>
     </div>
   );
 };
