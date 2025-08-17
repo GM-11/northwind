@@ -32,7 +32,7 @@ const ConstructionUpdates = () => {
   };
 
   const handleNext = () => {
-    if (caraouselIndex < 4) setCaraouselIndex(caraouselIndex + 1);
+    if (caraouselIndex < 3) setCaraouselIndex(caraouselIndex + 1);
   };
 
   const listOfUpdates = [
