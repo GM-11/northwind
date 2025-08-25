@@ -13,7 +13,7 @@ export const viewport = {
 export const metadata: Metadata = {
   title: "Northwind Sanctuary - Premium Sustainable Real Estate Development",
   description:
-    "Northwind Sanctuary is a premium real estate development that integrates sustainable living with abundant greenery and natural landscapes, offering residents a harmonious blend of modern amenities and environmental conservation.",
+    "Northwind Sanctuary is more than just a real estate development — it’s a statement of refined living.Rooted in trust, transparency, and timeless design, Northwind Sanctuary reflects a commitment to crafting spaces where luxury meets functionality. Every element is thoughtfully designed to offer not just a place to live, but a lifestyle to embrace." ,
   keywords:
     "Northwind Sanctuary, sustainable real estate, green living, premium development, eco-friendly homes, natural landscapes, environmental conservation, modern amenities, green spaces, sustainable community",
   authors: [{ name: "Northwind Sanctuary Development" }],
