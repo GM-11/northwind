@@ -18,9 +18,18 @@ import BanyanTower from "./components/BanyanTower";
 import CedarTower from "./components/CedarTower";
 import useIsMobile from "@/hooks/useIsMobile";
 import NavBar from "../components/NavBar";
+import Preloading from "./components/Preloading";
 
 const Towers = () => {
   const ref = useRef<HTMLCanvasElement>(null);
+
+  // Always show Preloading at the center of the screen
+  // (This will render it above everything else)
+  const preloadingOverlay = (
+    <div className="fixed inset-0 flex items-end justify-center z-50 pointer-events-none">
+      <Preloading />
+    </div>
+  );
   const { isMobile } = useIsMobile(768);
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -34,6 +43,7 @@ const Towers = () => {
     <AmaltasTower key="amaltas" />,
     <BanyanTower key="banyan" />,
     <CedarTower key="cedar" />,
+    <Preloading  />,
   ];
 
   const { scrollYProgress } = useScroll();
@@ -210,6 +220,8 @@ const Towers = () => {
 
         
       </div>
+      {/* Show Preloading overlay while images are loading */}
+      {imagesLoaded && preloadingOverlay}
     </div>
   );
 };
