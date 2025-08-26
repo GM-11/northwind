@@ -5,8 +5,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import SecondaryButton from "@/components/buttons/SecondaryButton";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
-import PreloadSign from "@/components/PreloadSign";
-import { motion, AnimatePresence } from "framer-motion";
+
 
 const AmaltasTower = () => {
   const router = useRouter();

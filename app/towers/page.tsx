@@ -43,7 +43,7 @@ const Towers = () => {
     <AmaltasTower key="amaltas" />,
     <BanyanTower key="banyan" />,
     <CedarTower key="cedar" />,
-    <Preloading  />,
+    <Preloading key="preloading" />,
   ];
 
   const { scrollYProgress } = useScroll();
