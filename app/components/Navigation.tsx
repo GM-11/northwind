@@ -2,7 +2,8 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import Cross from "@/components/icons/Cross";
-import React, { useEffect } from "react";     //we have removed useref from here
+import React, { useEffect } from "react"; //we have removed useref from here
+import { useRouter } from "next/navigation";
 
 const Navigation = ({
   show,
@@ -11,7 +12,6 @@ const Navigation = ({
   show: boolean;
   setShow: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
-
   useEffect(() => {
     setShow(show);
   }, [show]);
@@ -27,6 +27,8 @@ const Navigation = ({
       document.body.classList.remove("overflow-hidden");
     };
   }, [show]);
+
+  const router = useRouter();
 
   return (
     <AnimatePresence>
@@ -61,17 +63,20 @@ const Navigation = ({
 
           {/* Elements */}
           <div className="flex flex-col gap-[12px] lg:gap-[16px] border-primary self-start">
-            <div onClick={() => {
+            <div
+              onClick={() => {
                 setShow(false);
                 window.open("/sanctuary", "_self");
-                localStorage.setItem("purpose", "main")
-              }} className="uppercase font-boskaMedium text-[32px] lg:text-[64px] text-primary cursor-pointer">
+                localStorage.setItem("purpose", "main");
+              }}
+              className="uppercase font-boskaMedium text-[32px] lg:text-[64px] text-primary cursor-pointer"
+            >
               home
             </div>
             <div
               onClick={() => {
                 setShow(false);
-               window.open("/towers", "_self")
+                window.open("/towers", "_self");
               }}
               className="uppercase font-boskaMedium text-[32px] lg:text-[64px] text-primary cursor-pointer"
             >
@@ -79,7 +84,7 @@ const Navigation = ({
             </div>
             <div
               onClick={() => {
-                window.open("/amenities", "_self")
+                window.open("/amenities", "_self");
               }}
               className="uppercase font-boskaMedium text-[32px] lg:text-[64px] text-primary cursor-pointer"
             >
@@ -89,22 +94,29 @@ const Navigation = ({
               onClick={() => {
                 setShow(false);
                 localStorage.setItem("purpose", "architect");
-                window.open("/sanctuary", "_self")
+                window.open("/sanctuary", "_self");
               }}
               className="uppercase font-boskaMedium text-[32px] lg:text-[64px] text-primary cursor-pointer"
             >
               about architect
             </div>
 
-            <div  onClick={()=>{
-              window.open("/")
-            }}  className="uppercase font-boskaMedium text-[32px] lg:text-[64px] text-primary cursor-pointer">
+            <div
+              onClick={() => {
+                window.open("/");
+              }}
+              className="uppercase font-boskaMedium text-[32px] lg:text-[64px] text-primary cursor-pointer"
+            >
               about developer
             </div>
             <div
               onClick={() => {
                 setShow(false);
-               document.getElementById("connect-with-us")?.scrollIntoView({ behavior: "smooth" })
+                localStorage.setItem("purpose", "form");
+                router.push("/sanctuary");
+                document
+                  .getElementById("connect-with-us")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
               className="uppercase font-boskaMedium text-[32px] lg:text-[64px] text-primary cursor-pointer"
             >

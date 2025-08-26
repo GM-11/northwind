@@ -44,17 +44,18 @@ const NavBar = ({
 
         <PrimaryButton
           onTap={() => {
-            
             localStorage.setItem("purpose", "form");
             router.push("/sanctuary");
-            document.getElementById("connect-with-us")?.scrollIntoView({ behavior: "smooth" })
+            document
+              .getElementById("connect-with-us")
+              ?.scrollIntoView({ behavior: "smooth" });
           }}
           text="Enquire Now"
           className="p-[12px_36px] max-sm:hidden text-secondary z-[999999999]"
         />
       </motion.header>
 
-        <Navigation show={showNavigation} setShow={setShowNavigation} />
+      <Navigation show={showNavigation} setShow={setShowNavigation} />
     </>
   );
 };
