@@ -163,7 +163,7 @@ const RareLiving = () => {
             onTap={() => {
               if (status) {
                 const link = document.createElement("a");
-                link.href = "/assets/certificates/Brochure.pdf";
+                link.href = "/assets/certificates/newBrochure.pdf";
                 link.download = "Brochure.pdf";
                 link.click();
 
