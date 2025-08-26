@@ -44,8 +44,8 @@ const NavBar = ({
 
         <PrimaryButton
           onTap={() => {
-            localStorage.setItem("purpose", "form");
-            router.push("/sanctuary");
+           localStorage.setItem("purpose", "form");
+            if (!window.location.pathname.includes("sanctuary")) router.push("/sanctuary");
             document
               .getElementById("connect-with-us")
               ?.scrollIntoView({ behavior: "smooth" });
