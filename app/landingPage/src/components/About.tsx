@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import windLogo from "@/assets/wind-logo.png";
+
 import Image from "next/image";
 
 
@@ -64,15 +64,16 @@ const About = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex justify-center"
+            className="flex justify-center h-100vh"
           >
-            <MotionImage
-              whileHover={{ scale: 1.05, rotate: 5 }}
-              transition={{ duration: 0.3 }}
-              src={windLogo}
-              alt="North Wind Estates Logo"
-              className="w-full max-w-xs sm:max-w-sm md:max-w-md drop-shadow-2xl"
-            />
+          <video
+          className="object-cover h-[500px] rounded-lg shadow-elevated"
+          muted
+          autoPlay
+          loop
+          playsInline
+          src={"/assets/videos/verticalLoader.mp4"}
+        />
           </motion.div>
         </div>
       </div>

@@ -1,8 +1,10 @@
 // components/Footer.tsx
 import { Facebook, Instagram, Linkedin, MapPin } from "lucide-react";
 import Link from "next/link";
+import React from "react";
 import Image from "next/image";
 import windLogo from "../assets/wind-logo.png";
+
 
 const Footer = () => {
   return (
@@ -65,13 +67,7 @@ const Footer = () => {
             <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2 sm:mb-4">
               <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-wider">NORTH</span>
               <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24">
-                <Image
-                  src={windLogo}
-                  alt="Wind Logo"
-                  className="w-full h-full object-contain opacity-90"
-                  fill
-                  sizes="48px"
-                />
+                
               </div>
               <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-wider">WIND</span>
             </div>

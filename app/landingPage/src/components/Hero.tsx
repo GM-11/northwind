@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import heroImage from "@/assets/hero-birds.jpg";
+
+
 
 const Hero = () => {
   const ref = useRef(null);
@@ -18,14 +19,20 @@ const Hero = () => {
         style={{ y }}
         className="absolute inset-0 bg-cover bg-center"
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${heroImage})`,
-          }}
-        >
+        
+        
+          <div className="sticky top-0 h-[100vh] w-full z-0">
+        <video
+          className="object-cover h-full w-full"
+          muted
+          autoPlay
+          loop
+          playsInline
+          src={"/assets/videos/heroVideo1.mp4"}
+        />
+      </div>
           <div className="absolute inset-0 bg-gradient-to-b from-sky-light/30 via-transparent to-background/20"></div>
-        </div>
+        
       </motion.div>
       
       <motion.div

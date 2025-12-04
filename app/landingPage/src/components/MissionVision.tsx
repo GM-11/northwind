@@ -3,8 +3,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image"; // <--- IMPORTANT
-import missionImage from "@/assets/mission-team.jpg";
-import visionImage from "@/assets/vision-office.jpg";
+
+
 
 const MissionVision = () => {
   const ref = useRef(null);
@@ -48,7 +48,7 @@ const MissionVision = () => {
             {/* Wrapper for next/image fill */}
             <div className="relative w-full h-64 sm:h-72 md:h-80">
               <Image
-                src={missionImage}
+                src={"/assets/gallery4.jpg"}
                 alt="Our Mission - Team at construction site"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -75,7 +75,7 @@ const MissionVision = () => {
           >
             <div className="relative w-full h-64 sm:h-72 md:h-80">
               <Image
-                src={visionImage}
+                src={"/assets/gallery3.jpg"}
                 alt="Our Vision - Modern office interior"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"

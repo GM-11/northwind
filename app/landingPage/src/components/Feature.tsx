@@ -1,7 +1,7 @@
 import { Button } from "./ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import luxuryImage from "@/assets/luxury-interior.jpg";
+
 
 const Feature = () => {
   const ref = useRef(null);
@@ -28,7 +28,7 @@ const Feature = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url(${luxuryImage})`,
+            backgroundImage: `url(${"/assets/gallery4.jpg"})`,
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-teal-dark/70 via-transparent to-teal-dark/90"></div>
@@ -75,7 +75,7 @@ const Feature = () => {
               <Button
               onClick={() => scrollToSection("contact")}
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary rounded-full px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg"
+              className="bg-amber-50 border-2 border-black/50 text-black  hover:bg-amber-200/20 duration-200 hover:text-primary rounded-full px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg"
             >
               Explore Project
             </Button>
