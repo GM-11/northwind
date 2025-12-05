@@ -48,7 +48,7 @@ const Header: React.FC = () => {
               <div className="relative w-30 h-16 sm:w-100 sm:h-40 md:w-40 md:h-10 mx-auto">
                             
                                 <Image
-                                  src="/assets/headerLogo.svg"   // <-- replace with your real image name
+                                  src="/assets/headerLogo.svg"   
                                   alt="North Wind Estates Logo"
                                   fill
                                   className="object-cover "
